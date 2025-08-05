@@ -59,13 +59,13 @@ const skills = [
 export function ExperienceSection() {
     return (
         <Section id="experience">
-            <div className="mb-6 md:mb-8">
-                <p className="text-sm font-mono text-gray-500 mb-4">{'// RESUME'}</p>
-                <div className="text-4xl md:text-6xl font-heading font-light text-gray-200 mb-4">RESUME</div>
-            </div>
+            <h6 className="font-mono font-medium uppercase text-sm tracking-wider relative pt-4 dark:text-white before:content-['//'] before:pr-2 after:content-[attr(data-backdrop-text)] after:absolute after:top-0 after:left-0 after:font-heading after:font-bold after:uppercase after:text-4xl after:opacity-15" data-backdrop-text="Experiences">Experiences</h6>
+            <h2 className="text-2xl md:text-4xl font-heading font-bold text-black leading-tight">
+                My Professional Experiences
+            </h2>
+
 
             <div className="mb-8 md:mb-12">
-                <h2 className="text-2xl md:text-4xl font-heading font-semibold text-black mb-4">My Experience</h2>
                 <p className="text-gray-600 max-w-2xl text-sm md:text-base">
                     A comprehensive overview of my professional journey, education, and skills.
                 </p>

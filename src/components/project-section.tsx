@@ -17,7 +17,7 @@ const portfolioItems = [
 
 const categories = ["Show All", "professional", "personal"]
 
-export function PortfolioSection() {
+export function ProjectSection() {
     const [activeCategory, setActiveCategory] = useState("Show All")
 
     const filteredItems = portfolioItems.filter(
@@ -25,18 +25,15 @@ export function PortfolioSection() {
     )
 
     return (
-        <Section id="portfolio">
-            <div className="mb-6 md:mb-8">
-                <p className="text-sm font-mono text-gray-500 mb-4">{'// PORTFOLIO'}</p>
-                <div className="text-4xl md:text-6xl font-heading font-light text-gray-200 mb-4">PORTFOLIO</div>
-            </div>
+        <Section id="project">
+            <h6 className="font-mono font-medium uppercase text-sm tracking-wider relative pt-4 dark:text-white before:content-['//'] before:pr-2 after:content-[attr(data-backdrop-text)] after:absolute after:top-0 after:left-0 after:font-heading after:font-bold after:uppercase after:text-4xl after:opacity-15" data-backdrop-text="Projects">projects</h6>
+            <h2 className="text-2xl md:text-4xl font-heading font-bold text-black leading-tight">
+                My Latest Works
+            </h2>
 
-            <div className="mb-8 md:mb-12">
-                <h2 className="text-2xl md:text-4xl font-heading font-semibold text-black mb-4">My Latest Works</h2>
-                <p className="text-gray-600 max-w-2xl text-sm md:text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                </p>
-            </div>
+            <p className="text-gray-600 max-w-2xl text-sm md:text-base mt-4 mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            </p>
 
             <div className="flex flex-wrap gap-2 md:gap-4 mb-8 md:mb-12">
                 {categories.map((category) => (
