@@ -12,7 +12,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-open-sans)"],
-        heading: ["var(--font-poppins)"],
+        heading: ["var(--font-dosis)"],
         mono: ["var(--font-roboto-mono)"],
       },
       colors: {

@@ -2,13 +2,12 @@ import { MobileMenu } from "./mobile-menu"
 
 export function Header() {
     return (
-        <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
-            <div className="flex items-center justify-between px-4 md:px-8 py-4">
+        <header className="w-full">
+            <div className="flex items-center justify-between py-4">
                 <div className="flex items-center space-x-2">
                     <MobileMenu />
-                    <div className="flex items-center space-x-2">
-                        <h1 className="text-xl md:text-2xl font-heading font-bold text-black">JILLY</h1>
-                        <span className="text-xl md:text-2xl font-heading font-light text-gray-400">RATRIA</span>
+                    <div className="flex items-center space-x-2 py-2 md:py-7 lg:order-1">
+                        <h1 className="text-2xl md:text-5xl font-heading font-bold md:font-extrabold text-ink tracking-wider">Jilly <span className="stroke-text">Ratria</span></h1>
                     </div>
                 </div>
 

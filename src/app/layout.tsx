@@ -1,12 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Poppins, Open_Sans, Roboto_Mono } from "next/font/google"
+import { Open_Sans, Roboto_Mono, Dosis } from "next/font/google"
 import "./globals.css"
 
-const poppins = Poppins({
+const dosis = Dosis({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["400", "600", "800"],
+  variable: "--font-dosis",
   display: "swap",
 })
 
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${openSans.variable} ${robotoMono.variable}`}>
+    <html lang="en" className={`${dosis.variable} ${openSans.variable} ${robotoMono.variable}`}>
       <body className="font-sans antialiased bg-gray-bg">{children}</body>
     </html>
   )
