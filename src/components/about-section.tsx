@@ -1,23 +1,28 @@
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+// import { Badge } from "@/components/ui/badge"
+import { Section } from "./section"
 
 export function AboutSection() {
     return (
-        <section className="py-8 md:py-16">
-            <div className="mb-6 md:mb-8">
-                <p className="text-sm font-mono text-gray-500 mb-4">{'// ABOUT ME'}</p>
-                <div className="text-4xl md:text-6xl font-heading font-light text-gray-200 mb-4">ABOUT ME</div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                <div>
-                    <h2 className="text-2xl md:text-4xl font-heading font-semibold text-black mb-4 md:mb-6 leading-tight">
-                        UI & UX Designer.
+        <Section id="about">
+            <div className="flex flex-col md:flex-row md:gap-6 lg:gap-10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src="/jilly.jpg?height=256&width=256"
+                    alt="Jilly Ratria Profile"
+                    style={{
+                        height: '256px',
+                        width: '256px',
+                        borderRadius: '50%'
+                    }}
+                />
+                <div className="flex-1 space-y-3 md:space-y-4">
+                    <h6 className="font-mono font-medium uppercase text-sm tracking-wider relative pt-4 dark:text-white before:content-['//'] before:pr-2 after:content-[attr(data-backdrop-text)] after:absolute after:top-0 after:left-0 after:font-heading after:font-bold after:uppercase after:text-4xl after:opacity-15" data-backdrop-text="About Me">About Me</h6>
+                    <h2 className="text-2xl md:text-4xl font-heading font-bold text-black leading-tight">
+                        Senior Software Engineer
                         <br />
-                        Photographer
+                        {'(Front-end)'}
                     </h2>
-
-                    <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
+                    {/* <div className="flex flex-wrap gap-2 md:gap-3">
                         <Badge variant="outline" className="px-3 md:px-4 py-1 md:py-2 text-xs md:text-sm font-mono">
                             📷 Photoshoot(8%)
                         </Badge>
@@ -27,42 +32,46 @@ export function AboutSection() {
                         <Badge variant="outline" className="px-3 md:px-4 py-1 md:py-2 text-xs md:text-sm font-mono">
                             🔍 SEO(8%)
                         </Badge>
-                    </div>
-
-                    <Button className="bg-gray-400 hover:bg-gray-500 text-white px-4 md:px-6 py-2 rounded-full mb-6 md:mb-8">
-                        Hi
-                    </Button>
-
-                    <p className="text-gray-600 leading-relaxed mb-6 md:mb-8 text-sm md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua
-                    </p>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
-                        <div className="text-center sm:text-left">
-                            <div className="text-3xl md:text-4xl font-heading font-bold text-black mb-2">1+</div>
-                            <p className="text-xs font-mono text-gray-500 uppercase tracking-wider">YEARS OF EXPERIENCE</p>
-                        </div>
-                        <div className="text-center sm:text-left">
-                            <div className="text-3xl md:text-4xl font-heading font-bold text-black mb-2">2k</div>
-                            <p className="text-xs font-mono text-gray-500 uppercase tracking-wider">HOURS OF WORKING</p>
-                        </div>
-                        <div className="text-center sm:text-left">
-                            <div className="text-3xl md:text-4xl font-heading font-bold text-black mb-2">8+</div>
-                            <p className="text-xs font-mono text-gray-500 uppercase tracking-wider">PROJECTS DONE</p>
-                        </div>
+                    </div> */}
+                    <div>
+                        <p className="font-sans text-sm md:text-base text-gray-600">
+                            Senior engineer with 9+ years building scalable edtech platforms for millions of users. Combines deep technical expertise (React, TypeScript, WordPress) with product thinking to deliver 30%+ efficiency gains and 25% traffic growth. Passionate about mentoring teams, optimizing UX, and bridging engineering-product gaps.
+                        </p>
                     </div>
                 </div>
 
-                <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        src="/placeholder.svg?height=256&width=256"
-                        alt="Christina Gray Profile"
-                        className="w-full max-w-[200px] sm:max-w-[256px] h-auto rounded-lg object-cover"
-                    />
-                </div>
+
             </div>
-        </section>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mt-8">
+                <div className="flex gap-2">
+                    <p className="font-mono font-semibold text-6xl stroke-text">
+                        10
+                    </p>
+                    <div>
+                        <p className="block text-2xl font-sans">+</p>
+                        <p className="font-mono font-medium text-sm uppercase tracking-[0.5px]">Years of Experience</p>
+                    </div>
+                </div>
+                <div className="flex gap-2">
+                    <p className="font-mono font-semibold text-6xl stroke-text">
+                        20
+                    </p>
+                    <div>
+                        <p className="block text-2xl font-sans">k</p>
+                        <p className="font-mono font-medium text-sm uppercase tracking-[0.5px]">Hours of Working</p>
+                    </div>
+                </div>
+                <div className="flex gap-2">
+                    <p className="font-mono font-semibold text-6xl stroke-text">
+                        20
+                    </p>
+                    <div>
+                        <p className="block text-2xl font-sans">+</p>
+                        <p className="font-mono font-medium text-sm uppercase tracking-[0.5px]">Projects Done</p>
+                    </div>
+                </div>
+
+            </div>
+        </Section>
     )
 }

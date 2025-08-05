@@ -7,7 +7,7 @@ export function Header() {
                 <div className="flex items-center space-x-2">
                     <MobileMenu />
                     <div className="flex items-center space-x-2 py-2 md:py-7 lg:order-1">
-                        <h1 className="text-2xl md:text-5xl font-heading font-bold md:font-extrabold text-ink tracking-wider">Jilly <span className="stroke-text">Ratria</span></h1>
+                        <h1 className="text-2xl md:text-5xl lg:text-7xl font-heading font-bold md:font-extrabold text-ink tracking-wide">Jilly <span className="stroke-text font-sans tracking-normal">Ratria</span></h1>
                     </div>
                 </div>
 

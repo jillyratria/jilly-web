@@ -11,18 +11,19 @@ export default function Home() {
     <div className="min-h-screen container max-w-[1320px] mx-auto px-5 xl:px-3">
       <Header />
 
-      <div className="flex">
+      <main className="space-y-6 md:flex md:space-x-8 md:space-y-0 xl:space-x-12 flex-1">
         <Sidebar />
+        <div className="space-y-6 pb-12">
+          <AboutSection />
+          <PortfolioSection />
+          <ServicesSection />
+          <ResumeSection />
+        </div>
 
-        <main className="flex-1 w-full md:w-auto">
-          <div className="max-w-6xl mx-auto px-4 md:px-8">
-            <AboutSection />
-            <PortfolioSection />
-            <ServicesSection />
-            <ResumeSection />
-          </div>
-        </main>
-      </div>
+
+      </main>
+
+
     </div>
   )
 }
