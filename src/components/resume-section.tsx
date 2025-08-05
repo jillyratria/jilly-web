@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Section } from '@/components/section';
 
 const experiences = [
     {
@@ -57,7 +58,7 @@ const skills = [
 
 export function ResumeSection() {
     return (
-        <section className="py-8 md:py-16">
+        <Section id="resume">
             <div className="mb-6 md:mb-8">
                 <p className="text-sm font-mono text-gray-500 mb-4">{'// RESUME'}</p>
                 <div className="text-4xl md:text-6xl font-heading font-light text-gray-200 mb-4">RESUME</div>
@@ -120,6 +121,6 @@ export function ResumeSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     )
 }

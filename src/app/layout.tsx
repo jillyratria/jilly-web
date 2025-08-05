@@ -34,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${dosis.variable} ${openSans.variable} ${robotoMono.variable}`}>
-      <body className="font-sans antialiased bg-gray-bg">{children}</body>
+      <body className="font-sans antialiased bg-[#F2F5F8]">{children}</body>
     </html>
   )
 }

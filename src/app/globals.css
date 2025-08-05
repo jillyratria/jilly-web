@@ -164,6 +164,13 @@
     @apply bg-background text-foreground;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 1.5rem;
+}
 
 .stroke-text {
   --tw-text-opacity: 1;
@@ -171,4 +178,14 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1.4px;
   -webkit-text-stroke-color: var(--color-ink);
+}
+
+[data-backdrop-text]::after {
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.dark [data-backdrop-text]::after,
+[data-backdrop-text]::after {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
 }

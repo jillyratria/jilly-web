@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
+import { Section } from '@/components/section'
 
 const portfolioItems = [
     { id: 1, category: "branding", image: "/placeholder.svg?height=300&width=400" },
@@ -24,7 +25,7 @@ export function PortfolioSection() {
     )
 
     return (
-        <section className="py-8 md:py-16">
+        <Section id="portfolio">
             <div className="mb-6 md:mb-8">
                 <p className="text-sm font-mono text-gray-500 mb-4">{'// PORTFOLIO'}</p>
                 <div className="text-4xl md:text-6xl font-heading font-light text-gray-200 mb-4">PORTFOLIO</div>
@@ -76,6 +77,6 @@ export function PortfolioSection() {
                     </div>
                 ))}
             </div>
-        </section>
+        </Section>
     )
 }
