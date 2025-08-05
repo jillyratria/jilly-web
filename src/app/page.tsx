@@ -3,7 +3,7 @@ import { Sidebar } from "@/components/sidebar"
 import { AboutSection } from "@/components/about-section"
 import { PortfolioSection } from "@/components/portfolio-section"
 import { ServicesSection } from "@/components/services-section"
-import { ResumeSection } from "@/components/resume-section"
+import { ExperienceSection } from "@/components/experience-section"
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           <AboutSection />
           <PortfolioSection />
           <ServicesSection />
-          <ResumeSection />
+          <ExperienceSection />
         </div>
 
 

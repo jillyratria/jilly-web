@@ -7,15 +7,15 @@ import { cn } from "@/lib/utils"
 import { Section } from '@/components/section'
 
 const portfolioItems = [
-    { id: 1, category: "branding", image: "/placeholder.svg?height=300&width=400" },
-    { id: 2, category: "mockup", image: "/placeholder.svg?height=300&width=400" },
-    { id: 3, category: "branding", image: "/placeholder.svg?height=300&width=400" },
-    { id: 4, category: "mockup", image: "/placeholder.svg?height=300&width=400" },
-    { id: 5, category: "branding", image: "/placeholder.svg?height=300&width=400" },
-    { id: 6, category: "mockup", image: "/placeholder.svg?height=300&width=400" },
+    { id: 1, category: "professional", image: "/placeholder.svg?height=300&width=400" },
+    { id: 2, category: "personal", image: "/placeholder.svg?height=300&width=400" },
+    { id: 3, category: "professional", image: "/placeholder.svg?height=300&width=400" },
+    { id: 4, category: "personal", image: "/placeholder.svg?height=300&width=400" },
+    { id: 5, category: "professional", image: "/placeholder.svg?height=300&width=400" },
+    { id: 6, category: "personal", image: "/placeholder.svg?height=300&width=400" },
 ]
 
-const categories = ["Show All", "Branding", "Mockup"]
+const categories = ["Show All", "professional", "personal"]
 
 export function PortfolioSection() {
     const [activeCategory, setActiveCategory] = useState("Show All")
@@ -44,7 +44,7 @@ export function PortfolioSection() {
                         key={category}
                         variant="outline"
                         className={cn(
-                            "px-4 md:px-6 py-2 rounded-full font-mono text-xs md:text-sm",
+                            "px-4 md:px-6 py-2 rounded-full font-mono text-xs md:text-sm uppercase",
                             activeCategory === category
                                 ? "bg-black text-white border-black"
                                 : "bg-white text-gray-600 border-gray-300 hover:border-gray-400",
@@ -69,7 +69,7 @@ export function PortfolioSection() {
                         <Badge
                             className={cn(
                                 "absolute top-2 md:top-4 right-2 md:right-4 px-2 md:px-3 py-1 text-xs font-mono uppercase",
-                                item.category === "branding" ? "bg-gray-400 text-white" : "bg-gray-600 text-white",
+                                item.category === "professional" ? "bg-gray-400 text-white" : "bg-gray-600 text-white",
                             )}
                         >
                             {item.category}

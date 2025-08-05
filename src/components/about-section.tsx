@@ -18,7 +18,7 @@ export function AboutSection() {
                 <div className="flex-1 space-y-3 md:space-y-4">
                     <h6 className="font-mono font-medium uppercase text-sm tracking-wider relative pt-4 dark:text-white before:content-['//'] before:pr-2 after:content-[attr(data-backdrop-text)] after:absolute after:top-0 after:left-0 after:font-heading after:font-bold after:uppercase after:text-4xl after:opacity-15" data-backdrop-text="About Me">About Me</h6>
                     <h2 className="text-2xl md:text-4xl font-heading font-bold text-black leading-tight">
-                        Senior Software Engineer
+                        Software Engineer
                         <br />
                         {'(Front-end)'}
                     </h2>

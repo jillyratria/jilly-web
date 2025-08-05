@@ -56,9 +56,9 @@ const skills = [
     "Wireframing",
 ]
 
-export function ResumeSection() {
+export function ExperienceSection() {
     return (
-        <Section id="resume">
+        <Section id="experience">
             <div className="mb-6 md:mb-8">
                 <p className="text-sm font-mono text-gray-500 mb-4">{'// RESUME'}</p>
                 <div className="text-4xl md:text-6xl font-heading font-light text-gray-200 mb-4">RESUME</div>
