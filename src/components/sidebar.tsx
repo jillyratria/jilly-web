@@ -6,8 +6,6 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { Menu } from "@/lib/types"
 
-
-
 type Props = {
     menus: Menu[];
 }

@@ -39,22 +39,6 @@ const education = [
     },
 ]
 
-const skills = [
-    "Figma",
-    "Adobe Creative Suite",
-    "Sketch",
-    "InVision",
-    "Principle",
-    "HTML/CSS",
-    "JavaScript",
-    "React",
-    "Tailwind CSS",
-    "Photography",
-    "Brand Design",
-    "Prototyping",
-    "User Research",
-    "Wireframing",
-]
 
 export function ExperienceSection() {
     return (
@@ -67,9 +51,9 @@ export function ExperienceSection() {
                 Highlights from my career journey and academic background.
             </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            <div className="grid grid-cols-1">
                 <div>
-                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-black mb-4 md:mb-6">Experience</h3>
+                    {/* <h3 className="text-xl md:text-2xl font-heading font-semibold text-black mb-4 md:mb-6">Experience</h3> */}
                     <div className="space-y-4 md:space-y-6">
                         {experiences.map((exp, index) => (
                             <Card key={index} className="border border-gray-200">
@@ -88,34 +72,7 @@ export function ExperienceSection() {
                     </div>
                 </div>
 
-                <div>
-                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-black mb-4 md:mb-6">Education</h3>
-                    <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
-                        {education.map((edu, index) => (
-                            <Card key={index} className="border border-gray-200">
-                                <CardContent className="p-4 md:p-6">
-                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 gap-2">
-                                        <h4 className="text-base md:text-lg font-heading font-semibold text-black">{edu.degree}</h4>
-                                        <Badge variant="outline" className="text-xs font-mono w-fit">
-                                            {edu.period}
-                                        </Badge>
-                                    </div>
-                                    <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">{edu.school}</p>
-                                    <p className="text-gray-600 text-sm">{edu.description}</p>
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
 
-                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-black mb-4 md:mb-6">Skills</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {skills.map((skill, index) => (
-                            <Badge key={index} variant="outline" className="px-2 md:px-3 py-1 text-xs md:text-sm">
-                                {skill}
-                            </Badge>
-                        ))}
-                    </div>
-                </div>
             </div>
         </Section>
     )
