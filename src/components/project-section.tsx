@@ -15,13 +15,13 @@ const portfolioItems = [
     { id: 6, category: "personal", image: "/placeholder.svg?height=300&width=400" },
 ]
 
-const categories = ["Show All", "professional", "personal"]
+const categories = ["All", "professional", "personal"]
 
 export function ProjectSection() {
-    const [activeCategory, setActiveCategory] = useState("Show All")
+    const [activeCategory, setActiveCategory] = useState("All")
 
     const filteredItems = portfolioItems.filter(
-        (item) => activeCategory === "Show All" || item.category === activeCategory.toLowerCase(),
+        (item) => activeCategory === "All" || item.category === activeCategory.toLowerCase(),
     )
 
     return (

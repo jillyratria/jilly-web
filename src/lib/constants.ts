@@ -6,5 +6,5 @@ export const MENUITEMS: Menu[] = [
   { id: "skills", label: "skills", href: "#skills" },
   { id: "experience", label: "EXPERIENCES", href: "#experience" },
   { id: "services", label: "SERVICES", href: "#services" },
-  { id: "contact", label: "CONTACT", href: "#about" },
+  { id: "contact", label: "CONTACT", href: "#contact" },
 ];

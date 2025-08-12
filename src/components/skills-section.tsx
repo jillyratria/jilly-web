@@ -25,15 +25,15 @@ export function SkillsSection() {
                 Skills & Tools
             </h2>
             <p className="text-gray-600 max-w-3xl text-sm md:text-base mt-4 mb-8 md:mb-12">
-                Technologies and practices I use to turn ideas into fast, reliable, and scalable web applications.
+                From frontend frameworks to backend integrations, here are the technologies I work with daily — and a few I’ve picked up just to keep my curiosity fed.
             </p>
 
             <div className='flex flex-col gap-3'>
 
                 {
                     Object.keys(skills).map((cat) => {
-                        return <div className='flex items-center gap-3 transition-transform duration-200 hover:scale-105' key={cat}>
-                            <h3 className="text-base font-sans font-semibold text-black min-w-[200px]">{cat}</h3>
+                        return <div className='flex flex-col md:flex-row md:items-center gap-1 md:gap-3 transition-transform duration-200 hover:scale-105' key={cat}>
+                            <h3 className="text-sm md:text-base font-sans font-semibold text-black min-w-[200px]">{cat}</h3>
                             <div className="flex flex-wrap gap-2">
                                 {
                                     Array.isArray(skills[cat]) && skills[cat].map((skill, idx) => (
