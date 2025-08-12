@@ -63,13 +63,9 @@ export function ExperienceSection() {
             <h2 className="text-2xl md:text-4xl font-heading font-bold text-black leading-tight">
                 My Professional Experiences
             </h2>
-
-
-            <div className="mb-8 md:mb-12">
-                <p className="text-gray-600 max-w-2xl text-sm md:text-base">
-                    A comprehensive overview of my professional journey, education, and skills.
-                </p>
-            </div>
+            <p className="text-gray-600 max-w-3xl text-sm md:text-base mt-4 mb-8 md:mb-12">
+                Highlights from my career journey and academic background.
+            </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
                 <div>

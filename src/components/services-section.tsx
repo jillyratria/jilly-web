@@ -2,51 +2,44 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Section } from '@/components/section'
 const services = [
     {
-        title: "UI/UX Design",
-        description: "Creating intuitive and engaging user interfaces with modern design principles",
+        title: "Web & Mobile Development",
+        description: "From MVPs to production-ready apps, built to your needs",
         icon: "🎨",
     },
     {
-        title: "Web Development",
-        description: "Building responsive and performant websites using latest technologies",
+        title: "Web Performance Optimization",
+        description: "Reduce load times and improve Core Web Vitals",
         icon: "💻",
     },
     {
-        title: "Photography",
-        description: "Professional photography services for portraits, events, and commercial projects",
+        title: "UI/UX Implementation",
+        description: "Transform designs into responsive, accessible, and pixel-perfect interfaces",
         icon: "📸",
     },
     {
-        title: "Branding",
-        description: "Complete brand identity design including logos, color schemes, and guidelines",
+        title: "Technical Consulting",
+        description: "Help you make smart tech decisions and avoid costly mistakes",
         icon: "🎯",
     },
     {
-        title: "Consultation",
-        description: "Strategic design consultation to help improve your digital presence",
+        title: "Project Collaboration",
+        description: "Bring me in to solve hard problems and push innovative ideas forward",
         icon: "💡",
-    },
-    {
-        title: "Prototyping",
-        description: "Interactive prototypes to validate design concepts before development",
-        icon: "🔧",
     },
 ]
 
 export function ServicesSection() {
     return (
         <Section id="services">
-            <div className="mb-6 md:mb-8">
-                <p className="text-sm font-mono text-gray-500 mb-4">{'// SERVICES'}</p>
-                <div className="text-4xl md:text-6xl font-heading font-light text-gray-200 mb-4">SERVICES</div>
-            </div>
+            <h6 className="font-mono font-medium uppercase text-sm tracking-wider relative pt-4 dark:text-white before:content-['//'] before:pr-2 after:content-[attr(data-backdrop-text)] after:absolute after:top-0 after:left-0 after:font-heading after:font-bold after:uppercase after:text-4xl after:opacity-15" data-backdrop-text="Services">Services</h6>
+            <h2 className="text-2xl md:text-4xl font-heading font-bold text-black leading-tight">
+                What I Do
+            </h2>
+            <p className="text-gray-600 max-w-3xl text-sm md:text-base mt-4 mb-8 md:mb-12">
+                I partner with individuals, startups, and businesses to build modern, scalable web solutions. I’m not looking for a full-time role but am open to <b>collaborating on exciting, challenging projects.</b>
+            </p>
 
-            <div className="mb-8 md:mb-12">
-                <h2 className="text-2xl md:text-4xl font-heading font-semibold text-black mb-4">What I Do</h2>
-                <p className="text-gray-600 max-w-2xl text-sm md:text-base">
-                    I offer a comprehensive range of design and development services to help bring your vision to life.
-                </p>
-            </div>
+
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {services.map((service, index) => (

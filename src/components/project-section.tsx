@@ -31,8 +31,8 @@ export function ProjectSection() {
                 My Latest Works
             </h2>
 
-            <p className="text-gray-600 max-w-2xl text-sm md:text-base mt-4 mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            <p className="text-gray-600 max-w-3xl text-sm md:text-base mt-4 mb-8 md:mb-12">
+                A showcase of my work in two categories: <b>Professional</b> — projects built within organizations, and <b>Personal</b> — freelance and self-initiated projects where I owned the process end-to-end.
             </p>
 
             <div className="flex flex-wrap gap-2 md:gap-4 mb-8 md:mb-12">
