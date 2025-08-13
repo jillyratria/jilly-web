@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card"
 import { Section } from '@/components/section';
 import { Code, TrendingUp, Monitor, BrainCircuit, Handshake } from 'lucide-react'
 const services = [
@@ -51,7 +50,7 @@ export function ServicesSection() {
                     services.map((service) => {
                         return <div key={service.id} className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 border-b border-gray-300 pb-4 last:border-0 border-dashed">
                             <p className="font-mono font-semibold text-3xl md:text-4xl stroke-text">{service.id}</p>
-                            <div className="flex md:pl-4 md:flex-col items-center md:items-start gap-4 md:gap-1 md:min-w-[280px]">
+                            <div className="flex md:pl-4 md:flex-col items-center md:items-start gap-4 md:gap-1 md:min-w-[280px] text-gray-900">
                                 {service.icon}
                                 <p className="font-mono font-semibold">{service.title}</p>
 
