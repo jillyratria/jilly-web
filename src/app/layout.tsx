@@ -25,6 +25,9 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: "Jilly Ratria - Software Engineer (Front-end)",
   description: "Portfolio of Jilly Ratria - Software Engineer (Front-end)",
+  icons: {
+    icon: '/jr.png',
+  }
 }
 
 export default function RootLayout({
