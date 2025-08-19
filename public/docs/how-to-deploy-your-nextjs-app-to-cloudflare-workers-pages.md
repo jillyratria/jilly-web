@@ -1,30 +1,30 @@
-# Cara Deploy NextJS 15 ke Clodflare Workers Pages
+# Cara Deploy Next.js 15 ke Cloudflare Workers Pages
 
-Kamu udah mulai malas dengan "gurita ketergantungan" Vercel di semua lini kodinganmu? Atau Hobby plan kamu udah mulai habis kuotanya? Atau sesederhana malas memindahkan DNS konfigurasi domain-mu dari cloudflare ke vercel? Atau pengen nyobain hal baru aja?
+Mulai geregetan sama “gurita ketergantungan” Vercel di semua project? Kuota Hobby Plan kepentok? Atau sesimpel males mindahin konfigurasi DNS dari Cloudflare ke Vercel? Atau pengen coba sesuatu yang baru?
 
-Bagi saya alasan di atas semuanya benar, alias relate dengan saya. Setelah menjelajah dokumentasi cloudflare dan bertanya ke LLM di sekitar saya. Berikut cara-cara yang saya lakukan untuk melakukan deployment untuk nextjs app (existing) saya.
+Semua alasan di atas relate banget buat saya. Setelah baca-baca dokumentasi Cloudflare dan nanya ke beberapa LLM, ini rangkuman langkah yang saya pakai buat deploy Next.js (existing app) ke Cloudflare.
 
 ### Persiapan
 
-##### Install wrangler CLI as a devDependency
+##### Install Wrangler CLI sebagai devDependency
 
-Wrangler adalah CLI Cloudflare Developer Platform untuk mengatur projects workers dari device kerjamu langsung, jadi tidak perlu buka web mereka yang (menurutku) UX nya kurang itu .
+Wrangler adalah CLI untuk Cloudflare Developer Platform. Dengan ini kamu bisa ngatur Workers langsung dari mesin lokal—tanpa perlu buka dashboard web mereka (yang menurutku UX-nya agak kurang nyaman).
 
 ```sh
     npm i -D wrangler@latest
 ```
 
-##### Install @opennextjs/cloudflare
+##### Install `@opennextjs/cloudflare`
 
-Opennextjs adalaha library/adaptor buatan Cloudflare yang memungkinkan kamu deploy aplikasi nextjs-mu ke Cloudflare.
+OpenNextJS adalah adaptor dari Cloudflare yang bikin aplikasi Next.js-mu bisa jalan mulus di Cloudflare.
 
 ```sh
     npm i @opennextjs/cloudflare@latest
 ```
 
-##### Tambahkan file konfigurasi Wrangler `wrangler.jsonc`
+##### Tambah file konfigurasi Wrangler `wrangler.jsonc`
 
-File harus diletakkan di root app (sejajar dengan package.json)
+Taruh di root project (sejajar dengan `package.json`).
 
 ```json
 {
@@ -39,13 +39,13 @@ File harus diletakkan di root app (sejajar dengan package.json)
 }
 ```
 
-Sejak Wrangler v3.91.0, Cloudflare merekomendasikan untuk menggunakan file `.jsonc` dibanding `.toml` [(source)](https://developers.cloudflare.com/workers/wrangler/configuration).
+Sejak Wrangler v3.91.0, Cloudflare merekomendasikan pakai `.jsonc` dibanding `.toml` [(source)](https://developers.cloudflare.com/workers/wrangler/configuration).
 
-Jangan lupa, perbarui `compability_date` data ke tanggal saat ini, dengan menentukan `compatibility_date`, akan lebih mudah untuk Cloudflare menentukan kompabilitas feature di Worker mereka untuk aplikasimu [(source)](https://developers.cloudflare.com/workers/configuration/compatibility-dates/)
+Jangan lupa, perbarui `compatibility_date` ke tanggal **hari ini**. Dengan set `compatibility_date`, Cloudflare bisa menentukan kompatibilitas fitur Worker yang pas buat aplikasimu [(source)](https://developers.cloudflare.com/workers/configuration/compatibility-dates/).
 
-##### Tambahkan file konfigurasi OpenNext `open-next.config.ts`
+##### Tambah file konfigurasi OpenNext `open-next.config.ts`
 
-File harus diletakkan di root app (sejajar dengan package.json)
+Taruh juga di root project (sejajar dengan `package.json`).
 
 ```javascript
 import { defineCloudflareConfig } from "@opennextjs/cloudflare";
@@ -53,11 +53,11 @@ import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 export default defineCloudflareConfig();
 ```
 
-Konfigurasi ini digunakan digunakan untuk mengatur caching aplikasimu, untuk konfigurasi lebih kamu bisa langsung cek dokumentasinya di [sini](https://opennext.js.org/cloudflare/caching).
+Konfigurasi ini dipakai buat ngatur caching aplikasi. Butuh setup lebih lanjut? Cek dokumentasinya [di sini](https://opennext.js.org/cloudflare/caching).
 
 ##### Perbarui `package.json`
 
-Tambahkan script berikut ke package.json file-mu
+Tambahkan script berikut ke `package.json` kamu:
 
 ```json
 {
@@ -71,13 +71,15 @@ Tambahkan script berikut ke package.json file-mu
 }
 ```
 
-` JANGAN LUPA UNTUK MENAMBAHKAN .open-next & .wrangler DI FILE .gitignore`
+**Catatan:** tambahkan **`.open-next`** dan **`.wrangler`** ke `.gitignore` biar folder build & config lokal nggak ikut ke repo.
 
-### Preview dan Deploy dari local
+---
 
-##### Develop Locally
+### Preview & Deploy dari Lokal
 
-Ya seperti sebelumnya, tidak ada yang berubah. Running menggunkaan server development milik Next.js
+##### Develop locally
+
+Sama seperti biasa: jalankan dev server bawaan Next.js. Nggak ada yang berubah.
 
 ```sh
     npm dev
@@ -85,7 +87,7 @@ Ya seperti sebelumnya, tidak ada yang berubah. Running menggunkaan server develo
 
 ##### Preview
 
-Script ini digunakan untuk menguji apakah aplikasi web-mu benar-benar berjalan menggunakan Cloudflare adapter.
+Pakai script ini buat ngetes apakah app kamu beneran jalan pakai Cloudflare adapter.
 
 ```sh
     npm run preview
@@ -93,7 +95,7 @@ Script ini digunakan untuk menguji apakah aplikasi web-mu benar-benar berjalan m
 
 ##### Deploy
 
-Last but not least,
+Terakhir, tinggal kirim ke Cloudflare.
 
 ```sh
     npm run deploy
