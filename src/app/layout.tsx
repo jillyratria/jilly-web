@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   title: "Jilly Ratria - Software Engineer (Front-end)",
   description: "Portfolio of Jilly Ratria - Software Engineer (Front-end)",
   icons: {
-    icon: '/jr.png',
+    icon: '/jr.svg',
   }
 }
 
