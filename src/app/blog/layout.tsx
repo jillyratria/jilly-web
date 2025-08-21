@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { MENUITEMS } from "@/lib/constants"
+import { Section } from "@/components/section";
 
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function BlogLayout({
             <Header menus={MENUITEMS} />
             <div className="space-y-6 pb-12">
                 {children}
+
             </div>
         </main>
     )

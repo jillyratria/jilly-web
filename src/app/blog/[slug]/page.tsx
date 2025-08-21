@@ -1,4 +1,5 @@
 import { PostTitle, PostContent } from "@/components/blog/post";
+import { Section } from "@/components/section";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { Metadata } from "next";
@@ -16,10 +17,10 @@ export default async function PostDetailPage(props: Params) {
 
     const content = await markdownToHtml(post.content || "");
 
-    return <>
+    return <Section id="blog-detail">
         <PostTitle title={post.title} author="Jilly" date={post.date} />
         <PostContent content={content} />
-    </>;
+    </Section>;
 }
 
 type Params = {

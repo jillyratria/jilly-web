@@ -30,4 +30,9 @@ export const SOCIALS: Social[] = [
     desc: "LinkedIn",
     href: "https://id.linkedin.com/in/jillyratria",
   },
+  {
+    label: "JR",
+    desc: "Blog",
+    href: "/blog",
+  },
 ];

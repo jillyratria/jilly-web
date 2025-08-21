@@ -18,7 +18,8 @@ export function PostTitle({ title, author, date }: { title: string, author: stri
 
 export function PostContent({ content }: { content: string }) {
     return (
-        <article className="prose lg:prose-xl">
+        <article className="prose lg:prose-xl"
+        >
             <div
                 className={"markdown"}
                 dangerouslySetInnerHTML={{ __html: content }}
