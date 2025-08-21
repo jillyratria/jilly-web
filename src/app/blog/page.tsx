@@ -4,7 +4,6 @@ import { Intro } from "@/components/blog/intro";
 
 export default function BlogPage() {
     const allPosts = getAllPosts();
-    console.log("All Posts:", allPosts);
 
     return (
         <>

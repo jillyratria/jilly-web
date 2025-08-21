@@ -169,16 +169,12 @@ html {
 }
 
 [id] {
-  scroll-margin-top: 1.5rem;
-  @media only screen and (max-width: 600px) {
-    [id] {
-      scroll-margin-top: 20rem;
-    }
-  }
-  @media only screen and (max-width: 1024px) {
-    [id] {
-      scroll-margin-top: 5rem;
-    }
+  scroll-margin-top: 5rem;
+}
+
+@media only screen and (min-width: 800px) {
+  [id] {
+    scroll-margin-top: 1.5rem;
   }
 }
 
