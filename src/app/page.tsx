@@ -11,7 +11,7 @@ import { ContactSection } from "@/components/contact-section"
 export default function Home() {
   return (
     <div className="min-h-screen container max-w-[1320px] mx-auto px-5 xl:px-3">
-      <Header menus={MENUITEMS} />
+      <Header />
 
       <main className="space-y-6 lg:flex lg:space-x-8 lg:space-y-0 xl:space-x-12 flex-1">
         <Sidebar menus={MENUITEMS} />

@@ -172,7 +172,7 @@ html {
   scroll-margin-top: 1.5rem;
   @media only screen and (max-width: 600px) {
     [id] {
-      scroll-margin-top: 10rem;
+      scroll-margin-top: 20rem;
     }
   }
   @media only screen and (max-width: 1024px) {
