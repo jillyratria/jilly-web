@@ -1,6 +1,7 @@
 import { PostPreview } from "@/components/blog/post-preview";
 import { getAllPosts } from "@/lib/api";
 import { Intro } from "@/components/blog/intro";
+
 export default function BlogPage() {
     const allPosts = getAllPosts();
     console.log("All Posts:", allPosts);

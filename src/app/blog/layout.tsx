@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Intro } from "@/components/blog/intro";
+import { Header } from "@/components/header";
+import { MENUITEMS } from "@/lib/constants"
+
 
 export const metadata: Metadata = {
     title: `Blog | Jilly Ratria`,
@@ -12,8 +14,9 @@ export default function BlogLayout({
     children: React.ReactNode
 }) {
     return (
-        <main className="min-h-screen bg-white">
-            <div className="container max-w-4xl mx-auto px-4 py-8">
+        <main className="min-h-screen container max-w-[1320px] mx-auto px-5 xl:px-3">
+            <Header menus={MENUITEMS} />
+            <div className="space-y-6 pb-12">
                 {children}
             </div>
         </main>

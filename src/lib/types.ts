@@ -5,6 +5,12 @@ export type Menu = {
   active?: boolean;
 };
 
+export type Social = {
+  desc: string;
+  label: string;
+  href: string;
+};
+
 export type Post = {
   slug: string;
   title: string;
