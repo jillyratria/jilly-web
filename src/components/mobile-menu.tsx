@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { RectangleEllipsis, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import type { Menu } from "@/lib/types"
@@ -23,7 +23,8 @@ export function MobileMenu(props: Props) {
                     <span className="sr-only">Toggle menu</span>
                 </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-80 bg-black text-white p-0">
+            <SheetContent side="left" className="w-80 bg-black text-white p-0" aria-describedby="Menus" title="Menus">
+                <SheetTitle>Menus</SheetTitle>
                 <div className="p-8 flex flex-col justify-between flex-1">
                     <div>
                         <div className="flex items-center justify-between mb-8">
