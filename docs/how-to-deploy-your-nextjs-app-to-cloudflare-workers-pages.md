@@ -5,8 +5,6 @@ date: "2025-08-19"
 author: "Jilly R"
 ---
 
-# Cara Deploy Next.js 15 ke Cloudflare Workers Pages
-
 Mulai geregetan sama “gurita ketergantungan” Vercel di semua project? Kuota Hobby Plan kepentok? Atau sesimpel males mindahin konfigurasi DNS dari Cloudflare ke Vercel? Atau pengen coba sesuatu yang baru?
 
 Semua alasan di atas relate banget buat saya. Setelah baca-baca dokumentasi Cloudflare dan nanya ke beberapa LLM, ini rangkuman langkah yang saya pakai buat deploy Next.js (existing app) ke Cloudflare.
