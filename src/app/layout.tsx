@@ -1,12 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Open_Sans, Roboto_Mono, Dosis } from "next/font/google"
+import { Open_Sans, Roboto_Mono, Montserrat } from "next/font/google"
 import "./globals.css"
 
-const dosis = Dosis({
+const heading = Montserrat({
   subsets: ["latin"],
   weight: ["400", "600", "800"],
-  variable: "--font-dosis",
+  variable: "--font-heading",
   display: "swap",
 })
 
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${dosis.variable} ${openSans.variable} ${robotoMono.variable}`}>
+    <html lang="en" className={`${heading.variable} ${openSans.variable} ${robotoMono.variable}`}>
       <body className="font-sans antialiased bg-[#F2F5F8]">{children}</body>
     </html>
   )

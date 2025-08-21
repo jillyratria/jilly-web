@@ -36,12 +36,12 @@ const experiences = [
     },
 ]
 
-// const education = [
-//     {
-//         degree: "Bachelor of Education",
-//         school: "Universitas Negeri Yogyakarta",
-//     },
-// ]
+const education = [
+    {
+        degree: "Bachelor of Education",
+        school: "Universitas Negeri Yogyakarta",
+    },
+]
 
 
 export function ExperienceSection() {
@@ -51,17 +51,17 @@ export function ExperienceSection() {
             <h2 className="text-2xl md:text-4xl font-heading font-bold text-black leading-tight">
                 My Professional Experiences
             </h2>
-            <p className="text-gray-600 max-w-3xl text-sm md:text-base mt-4 mb-8 md:mb-12">
+            <p className="text-gray-600 max-w-3xl text-sm md:text-base mt-4 mb-4 md:mb-8">
                 Highlights from my career journey and academic background.
             </p>
 
             <div className="grid grid-cols-1">
                 <div>
-                    {/* <h3 className="text-xl md:text-2xl font-heading font-semibold text-black mb-4 md:mb-6">Experience</h3> */}
-                    <div className="space-y-4 md:space-y-6">
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-black mb-4">Experiences</h3>
+                    <div className="">
                         {experiences.map((exp, index) => (
-                            <Card key={index} className="border border-gray-200 shadow-none">
-                                <CardContent>
+                            <Card key={index} className="border-0 border-b border-dashed border-b-gray-200 shadow-none rounded-none px-0" >
+                                <CardContent className="px-0">
                                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 gap-2">
                                         <h4 className="text-base md:text-lg font-sans font-semibold text-black">{exp.title} <span>- {exp.company}</span></h4>
                                         <Badge variant="outline" className="text-xs font-mono w-fit">
@@ -69,6 +69,24 @@ export function ExperienceSection() {
                                         </Badge>
                                     </div>
                                     <p className="text-gray-700 text-sm">{exp.description}</p>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+
+
+            </div>
+            <div className="grid grid-cols-1">
+                <div>
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-black mt-6">Education(s)</h3>
+
+                    <div className="">
+                        {education.map((exp, index) => (
+                            <Card key={index} className="border-0 border-b last:border-b-0 border-dashed border-b-gray-200 shadow-none rounded-none px-0" >
+                                <CardContent className="px-0">
+                                    <h4 className="text-base md:text-lg font-sans font-semibold text-black">Bachelor of Education</h4>
+                                    <p className="text-gray-700 text-sm">Graduated at 2018 from Yogyakarta State University</p>
                                 </CardContent>
                             </Card>
                         ))}
