@@ -1,3 +1,10 @@
+---
+title: "Cara Deploy Next.js 15 ke Cloudflare Workers Pages"
+excerpt: "Mulai geregetan sama “gurita ketergantungan” Vercel di semua project? Kuota Hobby Plan kepentok? Atau sesimpel males mindahin konfigurasi DNS dari Cloudflare ke Vercel? Atau pengen coba sesuatu yang baru?"
+date: "2025-08-19"
+author: "Jilly R"
+---
+
 # Cara Deploy Next.js 15 ke Cloudflare Workers Pages
 
 Mulai geregetan sama “gurita ketergantungan” Vercel di semua project? Kuota Hobby Plan kepentok? Atau sesimpel males mindahin konfigurasi DNS dari Cloudflare ke Vercel? Atau pengen coba sesuatu yang baru?
@@ -53,7 +60,7 @@ import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 export default defineCloudflareConfig();
 ```
 
-Konfigurasi ini dipakai buat ngatur caching aplikasi. Butuh setup lebih lanjut? Cek dokumentasinya [di sini](https://opennext.js.org/cloudflare/caching).
+Konfigurasi ini digunakan buat ngatur caching aplikasi. Butuh setup lebih lanjut? Cek dokumentasinya [di sini](https://opennext.js.org/cloudflare/caching).
 
 ##### Perbarui `package.json`
 
@@ -79,7 +86,7 @@ Tambahkan script berikut ke `package.json` kamu:
 
 ##### Develop locally
 
-Sama seperti biasa: jalankan dev server bawaan Next.js. Nggak ada yang berubah.
+Sama seperti biasa: jalankan dev server bawaan Next.js,
 
 ```sh
     npm dev
@@ -87,7 +94,7 @@ Sama seperti biasa: jalankan dev server bawaan Next.js. Nggak ada yang berubah.
 
 ##### Preview
 
-Pakai script ini buat ngetes apakah app kamu beneran jalan pakai Cloudflare adapter.
+Pakai script ini untuk memastikan apakah app web kamu beneran jalan pakai Cloudflare adapter.
 
 ```sh
     npm run preview
@@ -95,7 +102,7 @@ Pakai script ini buat ngetes apakah app kamu beneran jalan pakai Cloudflare adap
 
 ##### Deploy
 
-Terakhir, tinggal kirim ke Cloudflare.
+Terakhir, tinggal deploy ke Cloudflare.
 
 ```sh
     npm run deploy
