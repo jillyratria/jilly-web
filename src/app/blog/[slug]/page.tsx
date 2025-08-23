@@ -1,6 +1,6 @@
 import { PostTitle, PostContent } from "@/components/blog/post";
 import { Section } from "@/components/section";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
