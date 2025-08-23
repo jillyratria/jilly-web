@@ -8,31 +8,31 @@ const experiences = [
         company: "Altatech by Ruangguru",
         period: "2024 - 2025",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+            "Led end-to-end development of an internal PaaS platform for CRM & HRIS, accelerating cross-team workflow development by 60% and reducing internal tooling costs by 40%. \nArchitected and delivered a comprehensive HRIS SaaS solution, featuring multi-role dashboards (company, HR admin, employee) and a downloadable mobile app for iOS and Android. \nSpearheaded the rapid development of a new payroll system from concept to launch in under two months. Collaborated closely with HR and product teams to ensure a smooth, error-free release for thousands of employees.",
     },
     {
         title: "Senior Software Engineer (Front-end)",
         company: "Ruangguru",
         period: "2020 - 2024",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+        description: "Migrated 2,000+ pages from HubSpot to self-hosted WordPress with zero downtime, improving CMS flexibility and cost effectiveness. Developed a custom WP theme with reusable UI components, cutting content publishing time by 30% and reducing development cost by 50%.\nLed the launch of an SEO-optimized pre-recorded education platform with 100K+ indexed pages, contributing to 20% user growth across multiple countries (Indonesia, Thailand, Vietnam) with 4 junior contributors\nArchitected a tryout platform as a shared service, enabling its adoption by 2+ other product teams and eliminating redundant development work.\nCHIEF of the quarter winner in 2021",
     },
     {
         title: "Software Engineer (Front-end)",
         company: "Ruangguru",
         period: "2017 - 2020",
-        description: "AssisLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+        description: "Development of ruangkelas (Google Classroom for Indonesia) using  ReasonML, and  launched in 4 weeks (0 runtime errors), scaling DAU from 0K → 5K\nPioneered the adoption of React Native for the RuangKerja app, establishing a new cross-platform development standard that reduced mobile development costs by 50%.\nSolely engineered the payment dashboard using React/Redux, designing a reliable interface that processed 1M+ transactions.\nLed development of Ruangpengajar (teacher app) with 50K+ Android downloads, collaborating with back-end and QA teams\nCHIEF of the year in 2018",
     },
     {
         title: "Junior Front-end Engineer",
         company: "Ruangguru",
         period: "2015 - 2017",
-        description: "AssisLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+        description: "Developed a high-traffic exam system (3M+ users) with LINE API integration.\nBuilt reusable UI components for using AngularJS.",
     },
     {
         title: "Web Developer",
         company: "Javasigna Intermedia",
-        period: "2013 - 2015",
-        description: "AssisLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+        period: "2014 - 2015",
+        description: "Built responsive UIs with HTML3, jQuery, and CSS3 for media clients",
     },
 ]
 
@@ -57,7 +57,7 @@ export function ExperienceSection() {
 
             <div className="grid grid-cols-1">
                 <div>
-                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-black mb-4">Experiences</h3>
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-black">Experiences</h3>
                     <div className="">
                         {experiences.map((exp, index) => (
                             <Card key={index} className="border-0 border-b border-dashed border-b-gray-200 shadow-none rounded-none px-0" >
@@ -68,7 +68,11 @@ export function ExperienceSection() {
                                             {exp.period}
                                         </Badge>
                                     </div>
-                                    <p className="text-gray-700 text-sm">{exp.description}</p>
+                                    <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
+                                        {exp.description.split('\n').map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))}
+                                    </ul>
                                 </CardContent>
                             </Card>
                         ))}

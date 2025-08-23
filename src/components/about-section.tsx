@@ -31,7 +31,7 @@ export function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mt-8">
                 <div className="flex gap-2">
                     <p className="font-mono font-semibold text-6xl stroke-text">
-                        10
+                        9
                     </p>
                     <div>
                         <p className="block text-2xl font-sans">+</p>
