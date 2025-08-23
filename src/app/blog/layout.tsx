@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
-import { MENUITEMS } from "@/lib/constants"
-import { Section } from "@/components/section";
-
 
 export const metadata: Metadata = {
     title: `Blog | Jilly Ratria`,
@@ -16,7 +13,7 @@ export default function BlogLayout({
 }) {
     return (
         <main className="min-h-screen container max-w-[1320px] mx-auto px-5 xl:px-3">
-            <Header menus={MENUITEMS} />
+            <Header />
             <div className="space-y-6 pb-12">
                 {children}
 
