@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jilly Web
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-## Learn More
+## Create a New Blog Post
 
-To learn more about Next.js, take a look at the following resources:
+Blog posts are Markdown files in the `docs` directory. The filename becomes the post slug.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a new file:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```txt
+docs/my-new-post.md
+```
 
-## Deploy on Vercel
+Add frontmatter and Markdown content:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```md
+---
+title: "My New Post"
+excerpt: "Short summary shown in the blog preview."
+date: "2026-06-08"
+author: "Jilly"
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Write your post content here in Markdown.
+
+### Section title
+
+More content...
+```
+
+Then regenerate the post data:
+
+```bash
+pnpm node scripts/generate-posts.mjs
+```
+
+The generated file is `src/generated/posts.data.ts`. Do not edit it manually.
+
+The post will be available at:
+
+```txt
+/blog/my-new-post
+```
+
+## Build
+
+```bash
+pnpm build
+```
+
+The build runs `scripts/generate-posts.mjs` automatically via the `prebuild` script.
+
+## Deploy to Cloudflare Workers
+
+This project is configured to deploy the Next.js app to Cloudflare Workers with `@opennextjs/cloudflare`.
+
+The important files are:
+
+- `wrangler.jsonc` controls the Cloudflare Worker entrypoint, Worker name, compatibility date, and static assets binding.
+- `open-next.config.ts` enables the OpenNext Cloudflare adapter.
+- `package.json` contains the `preview`, `deploy`, and `cf-typegen` scripts.
+
+First-time setup:
+
+```bash
+pnpm install
+pnpm exec wrangler login
+```
+
+Preview the Cloudflare Worker locally:
+
+```bash
+pnpm preview
+```
+
+Deploy to Cloudflare Workers:
+
+```bash
+pnpm deploy
+```
+
+The deployed Worker name comes from `wrangler.jsonc`:
+
+```jsonc
+{
+  "name": "jilly-web"
+}
+```
+
+After deployment, Wrangler will print the deployed Worker URL in the terminal. If you want to use a custom domain, connect it from the Cloudflare dashboard under the deployed Worker settings.
+
+Useful references:
+
+- [Cloudflare Workers Next.js guide](https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/)
+- [OpenNext Cloudflare adapter](https://opennext.js.org/cloudflare)
+- [Wrangler deploy command](https://developers.cloudflare.com/workers/wrangler/commands/workers/#deploy)

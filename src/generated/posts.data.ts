@@ -15,5 +15,13 @@ export const posts = [
     "author": "Jilly",
     "slug": "hello-world",
     "content": "\nOh halo dunia, it's been a long time since I'm writing again. It's nice going back to able to give structure on my disorganized mind.\n\nHere we go, wish me able to consistent to do this. I'm gonna write almost anything on my life. My thought, my works, my traveling life.\n"
+  },
+  {
+    "title": "I Envy Her Honesty",
+    "excerpt": "I just stumbled upon my writings from my early 20s, and somehow ended up rereading a whole blog. And honestly, I envy her a little.",
+    "date": "2025-08-01T05:35:07.322Z",
+    "author": "Jilly",
+    "slug": "i-envy-her-honesty",
+    "content": "\nI just stumbled upon my writings from my early 20s, and somehow ended up rereading a whole blog.\n\nAnd honestly, I envy her a little.\n\nNot because her life was better. It wasn’t necessarily easier. She was angry, sad, bitter, confused, dramatic, and sometimes joking about things that probably hurt more than she admitted.\n\nBut she was honest.\n\nShe wrote what she felt. She wrote what she saw. She didn’t always try to make herself look graceful, mature, or “fine.” She allowed herself to be messy in her writing.\n\nAnd I’m grateful I used to be that kind of person.\n\nNow I think I’m more closed. More careful. More afraid of being judged. Somewhere along the way, I learned to look okay. To look like I don’t have problems. To not let too much of myself spill out.\n\nI wonder when I started being this way.\n\nDon’t get me wrong, I’m happy. I’m content with my life. I like remembering that time of my life, but I don’t want to go back.\n\nStill, I do miss that version of me.\n\nThe one who wasn’t so scared of being seen.\n\nAnd maybe writing again is my small way of finding my way back to her."
   }
 ] as const;
